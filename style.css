@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  background-image: url("asset/Tic-Toe-Game-BG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+main > h1 {
+  font-size: 8vmin;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+main > p {
+  font-size: 3vmin;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  max-width: 70vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  margin-top: 2vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8vmin;
+  width: 100%;
+}
+
+.box {
+  border-radius: 1.5vmin;
+  background-color: white;
+  border: none;
+  width: 100%;
+  max-width: 20vmin;
+  height: 20vmin;
+  font-size: 8vmin;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.box:active {
+  transform: translateY(0);
+}
+
+.box:disabled {
+  cursor: not-allowed;
+}
+
+.result {
+  border-radius: 1.5vmin;
+  border: none;
+  margin-top: 3vmin;
+  background-color: white;
+  color: #e74c3c;
+  padding: 1.8rem 2.5rem;
+  font-size: 3.2vmin;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.result.show {
+  display: block;
+}
+
+.dark {
+  color: #27ae60;
+  background-color: #e8faf1;
+}
+
+.light {
+  color: #e74c3c;
+  background-color: #fdecea;
+}
+
+.resetGame {
+  padding: 14px 35px;
+  font-size: 2.8vmin;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+  transition: all 0.3s ease;
+}
+
+.resetGame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+}
+
+.resetGame:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  main > h1 {
+    font-size: 10vmin;
+    margin-bottom: 0.3rem;
+  }
+
+  main > p {
+    font-size: 4vmin;
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    max-width: 90vmin;
+  }
+
+  .game {
+    gap: 2vmin;
+  }
+
+  .box {
+    max-width: 26vmin;
+    height: 26vmin;
+    font-size: 10vmin;
+    border-radius: 2vmin;
+  }
+
+  .result {
+    padding: 1.2rem 1.5rem;
+    font-size: 4vmin;
+    margin-top: 2vmin;
+  }
+
+  .resetGame {
+    padding: 12px 28px;
+    font-size: 3.5vmin;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  main > h1 {
+    font-size: 9vmin;
+  }
+
+  main > p {
+    font-size: 3.5vmin;
+  }
+
+  .container {
+    max-width: 75vmin;
+  }
+
+  .box {
+    max-width: 22vmin;
+    height: 22vmin;
+    font-size: 9vmin;
+  }
+
+  .result {
+    padding: 1.5rem 2rem;
+    font-size: 3.5vmin;
+  }
+
+  .resetGame {
+    padding: 13px 32px;
+    font-size: 3vmin;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    padding: 2rem;
+  }
+
+  main > h1 {
+    font-size: 8vmin;
+  }
+
+  main > p {
+    font-size: 3vmin;
+  }
+
+  .container {
+    max-width: 65vmin;
+  }
+
+  .box {
+    max-width: 19vmin;
+    height: 19vmin;
+  }
+
+  .result {
+    padding: 1.6rem 2.2rem;
+    font-size: 3.2vmin;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    padding: 2.5rem;
+  }
+
+  main > h1 {
+    font-size: 7vmin;
+  }
+
+  main > p {
+    font-size: 2.8vmin;
+  }
+
+  .container {
+    max-width: 60vmin;
+  }
+
+  .box {
+    max-width: 18vmin;
+    height: 18vmin;
+    font-size: 7.5vmin;
+  }
+
+  .result {
+    padding: 1.8rem 2.5rem;
+    font-size: 3vmin;
+  }
+
+  .resetGame {
+    padding: 15px 38px;
+    font-size: 2.6vmin;
+  }
+}
+
+@media (min-width: 1441px) {
+  body {
+    padding: 3rem;
+  }
+
+  main > h1 {
+    font-size: 6vmin;
+    letter-spacing: 2px;
+  }
+
+  main > p {
+    font-size: 2.5vmin;
+  }
+
+  .container {
+    max-width: 55vmin;
+  }
+
+  .box {
+    max-width: 16vmin;
+    height: 16vmin;
+    font-size: 7vmin;
+  }
+
+  .result {
+    padding: 2rem 3rem;
+    font-size: 2.8vmin;
+  }
+
+  .resetGame {
+    padding: 16px 40px;
+    font-size: 2.4vmin;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  body {
+    padding: 1rem;
+  }
+
+  main > h1 {
+    font-size: 6vmin;
+    margin-bottom: 0.3rem;
+  }
+
+  main > p {
+    font-size: 2.5vmin;
+    margin-bottom: 1rem;
+  }
+
+  .game {
+    margin-top: 1vmin;
+  }
+
+  .box {
+    max-width: 12vmin;
+    height: 12vmin;
+    font-size: 5vmin;
+  }
+
+  .result {
+    padding: 1rem 1.5rem;
+    font-size: 2.5vmin;
+    margin-top: 1.5vmin;
+  }
+
+  .resetGame {
+    margin-top: 1.5rem;
+    padding: 10px 25px;
+    font-size: 2.2vmin;
+  }
+}
