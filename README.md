@@ -34,9 +34,19 @@ This project is a functional _Tic Tac Toe_ game that handles player turns (X and
 
 ## 👤 Author
 
-_Hafiz Muhammad Ahmed_
 
-- [LinkedIn](https://www.linkedin.com/in/hmahmd/)
-- [GitHub](https://github.com/hmahmd/) ---
+<div align="center">
+  <h3>Hafiz Muhammad Ahmed</h3>
+  <p><i>Frontend Developer | Crafting Interactive & Modern Web Experiences</i></p>
 
-<p align="center">Crafted with precision and passion by <b>Hafiz Muhammad Ahmed</b> 🚀</p>
+  <a href="https://www.linkedin.com/in/hmahmd/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/hmahmd/">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+
+  <br><br>
+  <p>"Building simple solutions for complex problems, one line of code at a time." 🚀</p>
+</div>
