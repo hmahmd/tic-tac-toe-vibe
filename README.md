@@ -7,7 +7,7 @@
 </p>
 
 <div align="center">
-  <img src="asset/Tic Toe game BG thumbnail.jpg" alt="Tic Tac Toe Vibe Preview" width="100%" style="border-radius: 15px;">
+  <img src="asset/Tic Toe game BG thumbnail.jpg" alt="Tic Tac Toe Vibe Preview" width="100%" style="border-radius: 2rem;">
 </div>
 
 <br />
